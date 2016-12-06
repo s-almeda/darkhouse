@@ -1,11 +1,11 @@
-﻿# comments that don’t affect the code start with this # symbol!
+# comments that don’t affect the code start with this # symbol!
 # Declare characters used by this game.
 init:
     #1024x768
     $ playerName = "You"
-    $ pmName = "Grace"
-    $ hsName = "Maximillian"
-    $ ppName = "Mary"
+    $ pmName = "Middle-aged Woman"
+    $ hsName = "Teenage Boy"
+    $ ppName = "Little Girl"
     
     
     
@@ -155,7 +155,7 @@ label Introduction:
     narrator "You grab air and end up clawing at the wooden floor instead."
     mc neutral "………"
     narrator "The smell of seawater and dust hits you in the face."
-    mc shock "Where am I?"
+    mc shock "Wha?!?"
 #### ~change "This isn’t home." later~ ####
     show bg lhLight with slowDissolve
     narrator "You are in a lighthouse!" with dissolve
@@ -164,39 +164,45 @@ label Introduction:
     menu:
         narrator "What do you say?"
         
-        "\"Where am I?!\"":
+        "\"Huh, where am I?!\"":
             mc shock "Where am I?!"
             show hs happy at left
             hs "Is there somebody else here?"
-            hs "Can you hear me?{p} I’m happy to see another friendly face!"
+            hs "Thank goodness!{p} I’m happy to see another friendly face!"
             $ hs_points += 1
+            
+            
         "\"Who brought me here? Show yourself!\"":
             mc shock "Who brought me here?{p} Show yourself!"
             show hs angry at left
             hs "Where do you get off introducing yourself like that!"
             $ hs_points -= 1
-        
+            mc "Oh? So you didn't kidnap me?"
+            hs "No! I went to bed last night and woke up here."
+            mc neutral "Oh..."
     ###some plot transition here?###
-    
-    mc "Everyone, calm down!{p} Our first priority should be getting out of these restraints."
-    hs "Then we could get the blindfolds off!"
-    
-    ###some plot transition here?###
-    
-    hs "So, let's all introduce ourselves..."
+    show hs normal at left
+    show pm normal at right
+    hs "We should introduce ourselves..."
     
     $ playerName = renpy.input("What is your name? ")
     if playerName == "":
         $playerName = "Kris"
     
     
-    mc "Hey! I'm %(playerName)s."
-    mc "I'm an aspiring detective."
+    mc "I'll go first. I'm %(playerName)s. {p} I'm an aspiring detective."
     mc "My father used to solve all these cases. It was really cool, and I wanted to be just like him."
+    show pm happy at right
     pm "That's wonderful! Are you going to work alongside your dad?"
-    mc "He's dead now..."
+    mc sad "No, he's dead now..."
+    show hs shock at left
+    show pm sad at right
     hs "Oh, my gosh…{p} I'm so sorry."
-    hs "'Sup, I'm %(hsName)s."
+    pm "Me too! If I had known, I wouldn't have brought it up.{p} My sincerest apologies!"
+    mc neutral "It's fine. Let's continue with the introductions, okay?"
+    $ hsName = "Maximillian"
+    hs "Got it. {p} 'Sup, I'm %(hsName)s."
+    $ pmName = "Grace"
     pm "Hello, darlings! You can just call me %(pmName)s."
     
     
