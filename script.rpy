@@ -3,9 +3,9 @@
 init:
     #1024x768
     $ playerName = "You"
-    $ pmName = "Psycho Mom"
-    $ hsName = "High Schooler"
-    $ ppName = "Pickpocket"
+    $ pmName = "Grace"
+    $ hsName = "Maximillian"
+    $ ppName = "Mary"
     
     
     
@@ -187,7 +187,7 @@ label Introduction:
     
     $ playerName = renpy.input("What is your name? ")
     if playerName == "":
-        $playerName = "default"
+        $playerName = "Kris"
     
     
     mc "Hey! I'm %(playerName)s."
