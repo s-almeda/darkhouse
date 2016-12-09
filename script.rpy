@@ -181,17 +181,20 @@ label Introduction:
             hs "No! I went to bed last night and woke up here."
             mc neutral "Oh..."
     ###some plot transition here?###
+    
     show hs normal at left
     show pm normal at right
-    hs "We should introduce ourselves..."
+    hs "So, who are all of you?"
     
     $ playerName = renpy.input("What is your name? ")
     if playerName == "":
         $playerName = "Kris"
     
     
-    mc "I'll go first. I'm %(playerName)s. {p} I'm an aspiring detective."
-    mc "My father used to solve all these cases. It was really cool, and I wanted to be just like him."
+    mc "I'll go first. I'm %(playerName)s. {p} I'm an aspiring detective. {p} While I'm at it, mind if I take notes? It could help us figure out why we're here and how to get out."
+    hs "I'm cool with it."
+    pm "Yes. That's fine, sweetheart."
+    mc happy "My father used to solve all these cases. It was really cool, and I wanted to be just like him."
     show pm happy at right
     pm "That's wonderful! Are you going to work alongside your dad?"
     mc sad "No, he's dead now..."
