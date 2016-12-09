@@ -191,7 +191,8 @@ label Introduction:
         $playerName = "Kris"
     
     
-    mc "I'll go first. I'm %(playerName)s. {p} I'm an aspiring detective. {p} While I'm at it, mind if I take notes? It could help us figure out why we're here and how to get out."
+    mc "I'll go first. I'm %(playerName)s. {p} I'm an aspiring detective."
+    mc "While I'm at it, mind if I take notes? {p} It could help us figure out why we're here and how to get out."
     hs "I'm cool with it."
     pm "Yes. That's fine, sweetheart."
     mc happy "My father used to solve all these cases. It was really cool, and I wanted to be just like him."
