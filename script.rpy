@@ -150,7 +150,7 @@ label Introduction:
     mc "zzZZZzzZZZ"
     show bg black
     narrator "You shiver."
-    mc angry "{size=-10}mooOOOom…{p} I told you to stop leaving the window open{/size}"
+    mc angry "{size=-5}mooOOOom…{p} I told you to stop leaving the window open{/size}"
     narrator "You try pulling the blanket closer in an attempt to shut the world out."
     narrator "You grab air and end up clawing at the wooden floor instead."
     mc neutral "………"
@@ -180,6 +180,10 @@ label Introduction:
             mc "Oh? So you didn't kidnap me?"
             hs "No! I went to bed last night and woke up here."
             mc neutral "Oh..."
+    
+    show pm normal at right
+    pm "SHHHHHHH! YOU'LL WAKE UP MASON!"
+    
     ###some plot transition here?###
     
     show hs normal at left
@@ -196,18 +200,28 @@ label Introduction:
     hs "I'm cool with it."
     pm "Yes. That's fine, sweetheart."
     mc happy "My father used to solve all these cases. It was really cool, and I wanted to be just like him."
+    
     show pm happy at right
+    
     pm "That's wonderful! Are you going to work alongside your dad?"
-    mc sad "No, he's dead now..."
+    
     show hs shock at left
     show pm sad at right
+    
+    mc sad "No, he's dead now..."
     hs "Oh, my gosh…{p} I'm so sorry."
     pm "Me too! If I had known, I wouldn't have brought it up.{p} My sincerest apologies!"
     mc neutral "It's fine. Let's continue with the introductions, okay?"
+    
+    show hs normal at left
+    show pm normal at right
+    
     $ hsName = "Maximillian"
-    hs "Got it. {p} 'Sup, I'm %(hsName)s."
+    hs "Got it. {w} 'Sup, I'm %(hsName)s."
+    ### more introduction for Maximillian
     $ pmName = "Grace"
-    pm "Hello, darlings! You can just call me %(pmName)s."
+    pm "Hello, darlings! You can just call me %(pmName)s.{p} Oh! And this here is Mason!"
+    pm "{size=-5}We should talk quietly, though.{w} He's sleeping.{/size}"
     
     
     
